@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Credit Score Quiz</title>
+	
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+		}
+		h1, h2 {
+			color: #0066cc;
+			text-align: center;
+		}
+		form {
+			background-color: #ffffff;
+			border: 2px solid #0066cc;
+			padding: 20px;
+			margin: 20px auto;
+			max-width: 600px;
+		}
+		label {
+			display: block;
+			margin-bottom: 10px;
+			color: #333333;
+			font-weight: bold;
+		}
+		input[type="radio"], input[type="checkbox"] {
+			margin-right: 5px;
+		}
+		input[type="submit"] {
+			background-color: #0066cc;
+			color: #ffffff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			font-size: 16px;
+			cursor: pointer;
+			margin-top: 20px;
+		}
+		input[type="submit"]:hover {
+			background-color: #004080;
+		}
+		
+	.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.badge {
+  display: inline-block;
+  background-color: #F2D049;
+  color: #262626;
+  padding: 4px 8px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  text-align:center;
+}
+
+	</style>
+</head>
+
+<body>
+    
+	<h1>Credit Score Quiz</h1>
+
+  <p>Get a <span class="badge">star badge</span> for taking this quiz that shows on your profile, and also share with the community.</p>
+
+	<form>
+		<h2>Question 1:</h2>
+		<p>What is a credit score?</p>
+		<label><input type="radio" name="q1" value="a">A three-digit number that represents your creditworthiness</label><br>
+		<label><input type="radio" name="q1" value="b">A rating system for your driving ability</label><br>
+		<label><input type="radio" name="q1" value="c">A measure of your physical fitness</label><br><br>
+		
+		<h2>Question 2:</h2>
+		<p>What factors can affect your credit score?</p>
+		<label><input type="checkbox" name="q2a" value="a">Payment history</label><br>
+		<label><input type="checkbox" name="q2b" value="b">Credit utilization</label><br>
+		<label><input type="checkbox" name="q2c" value="c">Length of credit history</label><br>
+		<label><input type="checkbox" name="q2d" value="d">All of the above</label><br><br>
+		
+		<h2>Question 3:</h2>
+		<p>What is a good credit score?</p>
+		<label><input type="radio" name="q3" value="a">300-600</label><br>
+		<label><input type="radio" name="q3" value="b">600-700</label><br>
+		<label><input type="radio" name="q3" value="c">700-850</label><br><br>
+		
+		<input type="submit" value="Submit">
+	</form>
+	
+	<script>
+		// Get the form element
+		const form = document.querySelector('form');
+		
+		// Add event listener to the form submission
+		form.addEventListener('submit', (event) => {
+			event.preventDefault();
+			
+			// Get the selected answers
+			const q1 = document.querySelector('input[name="q1"]:checked');
+			const q2
